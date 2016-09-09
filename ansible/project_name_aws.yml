@@ -5,7 +5,7 @@
   vars:
     # project specific variables
     #
-    - project_name: 'novaplataforma-zuum'
+    - project_name: 'springboot-app'
 
   roles:
     # plataformas roles
