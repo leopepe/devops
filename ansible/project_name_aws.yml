@@ -1,0 +1,23 @@
+---
+
+- hosts: all      # apply to all hosts
+  become: yes     # do everything as root/sudo/dzdo
+  vars:
+    # project specific variables
+    #
+    - project_name: 'novaplataforma-zuum'
+
+  roles:
+    # plataformas roles
+    #
+    - { common }
+    - { oracle-jdk }
+    - { supervisor }
+
+  tasks:
+    # custom tasks
+    #
+    - name: tunning
+      lineinfile:
+        line: 'tuning here'
+        dest: '/path/to/file'
