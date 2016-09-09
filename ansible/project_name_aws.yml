@@ -6,13 +6,12 @@
     # project specific variables
     #
     - project_name: 'springboot-app'
+    - pkg: 'spring-app-1.1.0'
 
   roles:
-    # plataformas roles
+    # springboot-app roles
     #
-    - { common }
-    - { oracle-jdk }
-    - { supervisor }
+    - { deploy, pkg_name: {{ pkg }}, rpm: true }
 
   tasks:
     # custom tasks
